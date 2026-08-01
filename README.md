@@ -1,6 +1,6 @@
 # Agent skills
 
-Eight small, self-contained skills for AI coding agents. Each is a single markdown file: when to invoke
+Eleven small, self-contained skills for AI coding agents. Each is a single markdown file: when to invoke
 it, what to do, and why the rule exists.
 
 They were extracted from one long-running project where an agent does most of the work and a
@@ -16,6 +16,9 @@ non-programmer owns the outcome. Every one of them exists because something went
 | [`wp-admin-script-leak`](wp-admin-script-leak/SKILL.md) | A front-end JavaScript error visible only when logged in. A logged-out check cannot see it. | |
 | [`windows-silent-subprocess`](windows-silent-subprocess/SKILL.md) | Stop spawned processes popping console windows on Windows and stealing the user's keystrokes. | [The window that typed my words into the wrong place](https://blonderoofrat.com/the-window-that-typed-my-words-into-the-wrong-place/) |
 | [`agent-clean-room`](agent-clean-room/SKILL.md) | Your agent sends your branch, your diff and your project files alongside your question. A second model can decline the lot because of what your repository is about. Run it from a scratch directory instead. | |
+| [`decision-capture`](decision-capture/SKILL.md) | An answer that only went into the work has not been recorded, it has been used. Store the decision verbatim, in one place, and gate re-asking on a lookup so the same question cannot be asked twice. | |
+| [`commitment-ledger`](commitment-ledger/SKILL.md) | A dropped commitment and a cancelled one look identical from the outside, and only one is a failure. One record per promise, resurfacing until it is disposed of; parked and killed are honest endings. | |
+| [`test-production-isolation`](test-production-isolation/SKILL.md) | A test process must not hold credentials that reach production. Not "must not use them" -- must not have them. Every other approach asks the code most likely to be wrong to behave. | |
 
 Where a skill has a story, it is the long-form account of the incident that produced the rule —
 what actually broke, what it looked like at the time, and why the rule is shaped the way it is.
