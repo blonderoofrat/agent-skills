@@ -6,16 +6,20 @@ it, what to do, and why the rule exists.
 They were extracted from one long-running project where an agent does most of the work and a
 non-programmer owns the outcome. Every one of them exists because something went wrong first.
 
-| skill | what it is for |
-|---|---|
-| [`citations`](citations/SKILL.md) | Never cite a source you have not fetched and read. Fabricated identifiers are well-formed, and the worst case is a *real* paper that does not say what it is cited for. |
-| [`denominator-rule`](denominator-rule/SKILL.md) | Never trust a green light that cannot state its denominator. A check that found nothing and a check that checked nothing print the same thing. |
-| [`hook-tuning`](hook-tuning/SKILL.md) | Block only on deterministic facts; warn and log on judgment. A false positive in a blocker is a defect, because it trains the bypass reflex. |
-| [`model-provenance`](model-provenance/SKILL.md) | A model's self-reported identity is not evidence. Verify which model produced an output from metadata, never from the text. |
-| [`wp-inline-js-safety`](wp-inline-js-safety/SKILL.md) | WordPress silently kills an inline script when `&&` sits between a `<` and a `>`. Invisible server-side. |
-| [`wp-admin-script-leak`](wp-admin-script-leak/SKILL.md) | A front-end JavaScript error visible only when logged in. A logged-out check cannot see it. |
-| [`windows-silent-subprocess`](windows-silent-subprocess/SKILL.md) | Stop spawned processes popping console windows on Windows and stealing the user's keystrokes. |
-| [`agent-clean-room`](agent-clean-room/SKILL.md) | Your agent sends your branch, your diff and your project files alongside your question. A second model can decline the lot because of what your repository is about. Run it from a scratch directory instead. |
+| skill | what it is for | the story behind it |
+|---|---|---|
+| [`citations`](citations/SKILL.md) | Never cite a source you have not fetched and read. Fabricated identifiers are well-formed, and the worst case is a *real* paper that does not say what it is cited for. | [The reference that didn't exist](https://blonderoofrat.com/the-reference-that-didnt-exist/) |
+| [`denominator-rule`](denominator-rule/SKILL.md) | Never trust a green light that cannot state its denominator. A check that found nothing and a check that checked nothing print the same thing. | ["Zero problems found." Zero of what?](https://blonderoofrat.com/zero-problems-found-zero-of-what/) |
+| [`hook-tuning`](hook-tuning/SKILL.md) | Block only on deterministic facts; warn and log on judgment. A false positive in a blocker is a defect, because it trains the bypass reflex. | [The safety check we learned to ignore](https://blonderoofrat.com/the-safety-check-we-learned-to-ignore/) |
+| [`model-provenance`](model-provenance/SKILL.md) | A model's self-reported identity is not evidence. Verify which model produced an output from metadata, never from the text. | |
+| [`wp-inline-js-safety`](wp-inline-js-safety/SKILL.md) | WordPress silently kills an inline script when `&&` sits between a `<` and a `>`. Invisible server-side. | [The page looked perfect. One button just did nothing.](https://blonderoofrat.com/the-page-that-looked-perfect-and-did-nothing/) |
+| [`wp-admin-script-leak`](wp-admin-script-leak/SKILL.md) | A front-end JavaScript error visible only when logged in. A logged-out check cannot see it. | |
+| [`windows-silent-subprocess`](windows-silent-subprocess/SKILL.md) | Stop spawned processes popping console windows on Windows and stealing the user's keystrokes. | [The window that typed my words into the wrong place](https://blonderoofrat.com/the-window-that-typed-my-words-into-the-wrong-place/) |
+| [`agent-clean-room`](agent-clean-room/SKILL.md) | Your agent sends your branch, your diff and your project files alongside your question. A second model can decline the lot because of what your repository is about. Run it from a scratch directory instead. | |
+
+Where a skill has a story, it is the long-form account of the incident that produced the rule —
+what actually broke, what it looked like at the time, and why the rule is shaped the way it is.
+The skill file is the rule; the article is the scar.
 
 ## The thread running through all of them
 
